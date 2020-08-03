@@ -3,7 +3,7 @@
     <van-form ref="form1">
       <van-field name="addressRadio" label="形式">
         <template #input>
-          <van-radio-group v-model="addressRadio" direction="horizontal">
+          <van-radio-group v-model="addressRadio" direction="horizontal" :checked-color="$mainColor">
             <van-radio name="2">线下活动</van-radio>
             <van-radio name="1">线上活动</van-radio>
           </van-radio-group>

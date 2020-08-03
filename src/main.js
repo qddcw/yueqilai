@@ -24,6 +24,7 @@ Vue.use(Vant);
 import dayjs from 'dayjs'
 Vue.prototype.$dayjs = dayjs
 
+Vue.prototype.$mainColor = "#ffb04f";
 
 // import {
 //   Toast,Tabbar, TabbarItem ,List, Cell, Card
