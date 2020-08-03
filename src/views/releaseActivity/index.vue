@@ -39,7 +39,7 @@
           活动标题
         </template>
       </van-field>
-      <van-field name="活动详情" >
+      <van-field name="活动详情">
         <template #label>
           <div class="iconBackground">
             <img src="../../assets/icon/详情 (1).png" alt="" />
@@ -306,13 +306,14 @@ export default {
     font-size: 17px;
   }
   .iconBackground {
-    background: url("../../assets/icon/圆角矩形 2 拷贝 9.png");
+    // background: url("../../assets/icon/圆角矩形 2 拷贝 9.png");
+    background: #ffb04f;
     width: 25px;
     height: 25px;
     border-radius: 5px;
     display: inline-block;
     text-align: center;
-    margin-right:5px;
+    margin-right: 5px;
     img {
       width: 14px;
       height: 16px;
