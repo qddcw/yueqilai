@@ -19,7 +19,7 @@
       placeholder="填写活动详细介绍，不得出现微信等联系方式"
     />
     <div style="margin: 16px;">
-      <van-button round block type="info" native-type="submit" @click="save">
+      <van-button round block type="warning" native-type="submit" @click="save">
         保存
       </van-button>
     </div>

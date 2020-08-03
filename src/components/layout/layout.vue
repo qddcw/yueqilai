@@ -32,7 +32,7 @@ export default {
   .content{
     height:calc(100vh - 98px);
     overflow: scroll;
-    background: #ccc;
+    background: #f7f7f7;
   }
 }
 </style>

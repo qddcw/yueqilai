@@ -39,7 +39,7 @@
       />
     </van-form>
     <div style="margin: 16px;">
-      <van-button round block type="info" native-type="submit" @click="save">
+      <van-button round block type="warning" native-type="submit" @click="save">
         保存
       </van-button>
     </div>

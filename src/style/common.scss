@@ -108,3 +108,11 @@ html,body{
 .animation_opactiy{
     animation: backOpacity 2s ease-in-out infinite;
 }
+button.van-button--warning{
+    color: #fff;
+    background-color: #ffb04f;
+    border: 1px solid #ffb04f;
+    width:152px;
+    height:46px;
+    margin:0 auto;
+}

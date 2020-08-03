@@ -1,17 +1,23 @@
 <template>
   <div class="releaseActivity">
     <div class="title">活动信息</div>
-    <van-form ref="form1">
+    <van-form ref="form1" label-width="90px">
       <van-field
         required
         readonly
         clickable
         name="活动类型"
         :value="activityInfo.activityType"
-        label="活动类型"
         @click="showPicker = true"
         :rules="[{ required: true, message: '请选择活动类型' }]"
-      />
+      >
+        <template #label>
+          <div class="iconBackground">
+            <img src="../../assets/icon/详情.png" alt="" />
+          </div>
+          活动类型
+        </template>
+      </van-field>
       <van-popup v-model="showPicker" position="bottom">
         <van-picker
           show-toolbar
@@ -25,10 +31,21 @@
         v-model="activityInfo.activityTitle"
         maxlength="20"
         name="活动标题"
-        label="活动标题"
         :rules="[{ required: true, message: '请填写活动标题' }]"
-      />
-      <van-field name="活动详情" label="活动详情">
+        ><template #label>
+          <div class="iconBackground">
+            <img src="../../assets/icon/标题.png" alt="" />
+          </div>
+          活动标题
+        </template>
+      </van-field>
+      <van-field name="活动详情" >
+        <template #label>
+          <div class="iconBackground">
+            <img src="../../assets/icon/详情 (1).png" alt="" />
+          </div>
+          活动详情
+        </template>
         <template #input>
           <div
             style="width:100%;text-align:right"
@@ -39,15 +56,27 @@
           </div>
         </template>
       </van-field>
-      <van-field name="uploader" label="添加图片(最多四张)">
+      <van-field name="uploader">
+        <template #label>
+          <div class="iconBackground">
+            <img src="../../assets/icon/上 传 (1).png" alt="" />
+          </div>
+          添加图片(最多四张)
+        </template>
         <template #input>
           <van-uploader v-model="activityInfo.uploader" :max-count="4" />
         </template>
       </van-field>
     </van-form>
     <div class="title">活动设置</div>
-    <van-form ref="form2">
+    <van-form ref="form2" label-width="90px">
       <van-field name="活动人数" label="活动人数">
+        <template #label>
+          <div class="iconBackground">
+            <img src="../../assets/icon/人数 (1).png" alt="" />
+          </div>
+          活动人数
+        </template>
         <template #input>
           <div
             style="width:100%;text-align:right"
@@ -58,7 +87,13 @@
           </div>
         </template>
       </van-field>
-      <van-field name="活动时间" label="活动时间">
+      <van-field name="活动时间">
+        <template #label>
+          <div class="iconBackground">
+            <img src="../../assets/icon/时间.png" alt="" />
+          </div>
+          活动时间
+        </template>
         <template #input>
           <div
             style="width:100%;text-align:right"
@@ -69,7 +104,13 @@
           </div>
         </template>
       </van-field>
-      <van-field name="活动地址" label="活动地址">
+      <van-field name="活动地址">
+        <template #label>
+          <div class="iconBackground">
+            <img src="../../assets/icon/地址 (1).png" alt="" />
+          </div>
+          活动地址
+        </template>
         <template #input>
           <div
             style="width:100%;text-align:right"
@@ -81,15 +122,15 @@
         </template>
       </van-field>
     </van-form>
-    <div style="margin: 16px;">
+    <div style="margin: 16px;text-align:center;">
       <van-button
         round
         block
-        type="info"
+        type="warning"
         native-type="submit"
         @click="onSubmit"
       >
-        提交
+        确认发布
       </van-button>
     </div>
   </div>
@@ -263,6 +304,20 @@ export default {
     height: 40px;
     line-height: 40px;
     font-size: 17px;
+  }
+  .iconBackground {
+    background: url("../../assets/icon/圆角矩形 2 拷贝 9.png");
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    margin-right:5px;
+    img {
+      width: 14px;
+      height: 16px;
+      vertical-align: middle;
+    }
   }
 }
 </style>
