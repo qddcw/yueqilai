@@ -1,7 +1,7 @@
 <template>
   <div class="releaseActivity">
     <div class="title">活动信息</div>
-    <van-form ref="form1" label-width="90px">
+    <van-form ref="form1" label-width="90px" input-align="right">
       <van-field
         required
         readonly
@@ -122,7 +122,8 @@
         </template>
       </van-field>
     </van-form>
-    <div style="margin: 16px;text-align:center;">
+    <div style="text-align:center;">
+      <div class="text">查看活动审核规则</div>
       <van-button
         round
         block
@@ -299,6 +300,7 @@ export default {
 
 <style lang="scss">
 .releaseActivity {
+  $mainColor: #ffb04f;
   padding: 10px;
   .title {
     height: 40px;
@@ -307,7 +309,7 @@ export default {
   }
   .iconBackground {
     // background: url("../../assets/icon/圆角矩形 2 拷贝 9.png");
-    background: #ffb04f;
+    background: $mainColor;
     width: 25px;
     height: 25px;
     border-radius: 5px;
@@ -320,5 +322,15 @@ export default {
       vertical-align: middle;
     }
   }
+  .text {
+    width: 100%;
+    height: 78px;
+    text-align: center;
+    color: $mainColor;
+    font-size:14px;
+    letter-spacing: 3px;
+    line-height: 78px;
+  }
+  
 }
 </style>

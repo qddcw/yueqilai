@@ -108,11 +108,11 @@ html,body{
 .animation_opactiy{
     animation: backOpacity 2s ease-in-out infinite;
 }
-$primaryColor:#ffb04f;
+$warningColor:#ffb04f;
 button.van-button--warning{
     color: #fff;
-    background-color: $primaryColor;
-    border: 1px solid $primaryColor;
+    background-color: $warningColor;
+    border: 1px solid $warningColor;
     width:152px;
     height:46px;
     margin:0 auto;
