@@ -86,12 +86,12 @@ export default {
     },
     onConfirm(time) {
       this.startTime = this.$dayjs(new Date(time)).format(
-        "YYYY-MM-DD HH:mm:ss"
+        "YYYY-MM-DD HH:mm"
       );
       this.showPicker1 = false;
     },
     onConfirm2(time) {
-      this.endTime = this.$dayjs(new Date(time)).format("YYYY-MM-DD HH:mm:ss");
+      this.endTime = this.$dayjs(new Date(time)).format("YYYY-MM-DD HH:mm");
       this.showPicker2 = false;
     },
   },

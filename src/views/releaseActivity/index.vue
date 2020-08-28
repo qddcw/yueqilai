@@ -51,8 +51,8 @@
             style="width:100%;text-align:right"
             @click="gotoDetailsConfig('activityDetails')"
           >
-            <span>{{ activityInfo.activityDetailsStatus }}</span
-            ><van-icon style="line-height:19px;" name="arrow" />
+            <span style="vertical-align: middle;">{{ activityInfo.activityDetailsStatus }}</span
+            ><van-icon style="vertical-align: middle;" name="arrow" />
           </div>
         </template>
       </van-field>
@@ -82,8 +82,8 @@
             style="width:100%;text-align:right"
             @click="gotoDetailsConfig('activityNumbers')"
           >
-            <span>{{ activityInfo.activityNumberStatus }}</span
-            ><van-icon style="line-height:19px;" name="arrow" />
+            <span style="vertical-align: middle;">{{ activityInfo.activityNumberStatus }}</span
+            ><van-icon style="vertical-align: middle;" name="arrow" />
           </div>
         </template>
       </van-field>
@@ -99,8 +99,8 @@
             style="width:100%;text-align:right"
             @click="gotoDetailsConfig('activityTime')"
           >
-            <span>{{ activityInfo.activityTimeStatus }}</span
-            ><van-icon style="line-height:19px;" name="arrow" />
+            <span style="vertical-align: middle;">{{ activityInfo.activityTimeStatus }}</span
+            ><van-icon style="vertical-align: middle;" name="arrow" />
           </div>
         </template>
       </van-field>
@@ -116,8 +116,8 @@
             style="width:100%;text-align:right"
             @click="gotoDetailsConfig('activityAddress')"
           >
-            <span>{{ activityInfo.activityAdressStatus }}</span
-            ><van-icon style="line-height:19px;" name="arrow" />
+            <span style="vertical-align: middle;">{{ activityInfo.activityAdressStatus }}</span
+            ><van-icon style="vertical-align: middle;" name="arrow" />
           </div>
         </template>
       </van-field>
@@ -267,15 +267,14 @@ export default {
                   this.activityInfo.addressRadio == "1"
                     ? ""
                     : this.activityInfo.detailAddress,
-                beginTime: new Date(this.activityInfo.startTime),
-                endTime: new Date(this.activityInfo.endTime),
+                beginTime: this.activityInfo.startTime,
+                endTime: this.activityInfo.endTime,
                 leastJoinNum: this.activityInfo.minNumber,
                 mostJoinNum: this.activityInfo.maxNumber,
                 remark: "1",
                 images: images.join(",,"),
               };
               console.log(params);
-              this.$toast.fail("参数在console里");
 
               let data = await this.$axios.post(
                 "/yue/activity/info/submit/ajax/submit",
@@ -327,10 +326,9 @@ export default {
     height: 78px;
     text-align: center;
     color: $mainColor;
-    font-size:14px;
+    font-size: 14px;
     letter-spacing: 3px;
     line-height: 78px;
   }
-  
 }
 </style>

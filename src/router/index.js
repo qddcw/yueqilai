@@ -14,7 +14,7 @@ const routes = [{
       path: "/",
       name: "layout",
       component: Layout,
-      redirect: '/releaseActivity',
+      redirect: '/details',
       children: [{
         path: "/releaseActivity",
         name: "releaseActivity",
@@ -75,6 +75,18 @@ const routes = [{
           import("../views/releaseActivity/activityAddress"),
         meta: {
           title: '活动地址'
+        }
+      }]
+    },
+    {
+      path: "/details",
+      component: Layout,
+      children: [{
+        path: "/details",
+        name: "details",
+        component: () =>
+          import("../views/details"),
+        meta: {
         }
       }]
     },

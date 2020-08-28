@@ -1,10 +1,10 @@
 <template>
   <div class="layout">
     <HeadTop :head-title="$route.meta.title" go-back="true"></HeadTop>
-    <div class="content">
+    <div class="content" :style="{height:$route.meta.title?'calc(100vh - 48px)':'100vh'}">
       <router-view></router-view>
     </div>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 
@@ -15,7 +15,7 @@ import Footer from "@/components/footer/index";
 export default {
   components: {
     HeadTop,
-    Footer,
+    // Footer,
   },
   created(){
     
@@ -30,7 +30,6 @@ export default {
 <style lang="scss">
 .layout {
   .content{
-    height:calc(100vh - 98px);
     overflow: scroll;
     background: #f7f7f7;
   }
